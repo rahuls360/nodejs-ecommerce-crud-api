@@ -19,6 +19,7 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
+app.get('/', (req, res) => res.send('Works fine'));
 app.use('/products', productsRouter);
 
 const PORT = process.env.PORT || 3001;
