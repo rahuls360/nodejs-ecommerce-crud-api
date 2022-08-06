@@ -23,3 +23,12 @@ https://www.youtube.com/watch?v=fgTGADljAeg
 ### Setup
 
 - Install MongoDB, Mongo Compass and Mongo Shell. Refer the official documentation.
+
+### Bugs fixes
+
+- To deploy to vercel -> Faced issues with file name. (server.js vs index.js) -> Fix: Use index.js instead of server.js. Change main file in package json and other scripts
+- While deploying, faced issues with package json script not completing deployment -> Fix: Renamed my development script to another name. Created a 'start' script, so that vercel's deployment doesn't wait for the program to end. (start scripts keep running vs build scripts end once completed). Used node file.js for safety reasons. Debugged this using Settings -> Advanced -> Directory Listing. (which shows the files deployed on that URL)
+- Faced issues while running nodejs server in vercel -> Fix: Add vercel config [https://www.youtube.com/watch?v=OoI87qhiFlQ]
+- Faced issues with MongoDB connection string -> Fix: Remove retryWrites=true in the string [https://stackoverflow.com/a/64205794]
+- Add environment variables -> In Project -> Settings -> Environment variables
+- Do deployments from local. Install vercel-cli globally using npm. Pull environment variables from Vercel's Project settings using `vercel env pull`. It overrides your .env file
