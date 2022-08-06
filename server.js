@@ -3,6 +3,7 @@ require('dotenv').config();
 
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const mongoose = require('mongoose');
 const productsRouter = require('./routes/products');
 
@@ -14,6 +15,8 @@ db.once('open', () => console.log('Connected to DB'));
 
 // accept JSON data
 app.use(express.json());
+
+app.use(cors());
 
 // Routes
 app.use('/products', productsRouter);
