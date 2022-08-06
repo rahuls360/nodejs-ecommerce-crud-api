@@ -22,4 +22,4 @@ https://www.youtube.com/watch?v=fgTGADljAeg
 
 ### Setup
 
-- Install MongoDB, Mongo Compass and Mongo Shell. Refer the official docs.
+- Install MongoDB, Mongo Compass and Mongo Shell. Refer the official documentation.
