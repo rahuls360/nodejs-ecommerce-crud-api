@@ -1,0 +1,25 @@
+GET http://localhost:5000/products
+
+###
+
+POST http://localhost:5000/products
+content-type: application/json
+
+{
+    "name": "Snop Dog"
+}
+
+###
+
+PATCH http://localhost:5000/products/62ee2409359dcb9bf37ebce9
+content-type: application/json
+
+{
+    "name": "Another Dog 2"
+}
+
+###
+
+DELETE http://localhost:5000/products/62ee20b23a13023cbe59e6d4
+
+###
